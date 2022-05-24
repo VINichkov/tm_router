@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  app:
+    image: vnichkov/tm_router:latest
+    command: python main.py
+    volumes:
+      - .:/share
+    deploy:
+      resources:
+        limits:
+          memory: 50m
